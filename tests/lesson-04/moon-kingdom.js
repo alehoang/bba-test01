@@ -6,24 +6,23 @@ function creatCharacters() {
         { name: "Mario", level: 3, health: 450 },
         { name: "Luigi", level: 1, health: 300 },
         { name: "Dragon", level: 10, health: 600 }
-    ]
+    ];
     // Tạo mảng mới charactesPowerUp
     let charactersPowerUp = characters.map(character =>
     ({
         name: character.name.toUpperCase(),
         level: character.level * 2,
         health: character.health * 3
-    }))
-    console.log(charactersPowerUp)
+    }));
+    console.log(charactersPowerUp);
     // Filter characters có health > 1000 sang mảng mới possibleWinners
     let possibleWinners = charactersPowerUp.filter(vn => vn.health > 1000);
     console.log(possibleWinners);
-
 }
 creatCharacters();
 
 // Tạo printLeaderboard
-console.log("Stage 04 - bài 2 tạo Leaderboard")
+console.log("Stage 04 - bài 2 tạo Leaderboard");
 function printLeaderboard(players) {
     // Sắp xếp theo thứ tự score
     players.sort((a, b) => b.score - a.score);
